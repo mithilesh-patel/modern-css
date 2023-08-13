@@ -1,0 +1,55 @@
+/* Variables in CSS */
+
+/* The var() function is used to insert the value of a CSS variable.
+
+CSS variables have access to the DOM, which means that you can create variables with local or global scope,
+change the variables with JavaScript, and change the variables based on media queries.
+
+A good way to use CSS variables is when it comes to the colors of your design.
+Instead of copy and paste the same colors over and over again, you can place them in variables. */
+
+:root{
+    --card-border: 20px;
+    --card-padding: 30px;
+    --card-text: rgb(148, 202, 0);
+
+}
+
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* HEADER */
+
+header{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.card{
+    display: inline-block;
+    
+    margin: 40px 30px;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(163, 71, 238);
+    border-radius: var(--card-border);
+    padding: var(--card-padding);
+    color: var(--card-text);
+    box-shadow: 8px 8px 20px 10px rgb(138, 138, 138);
+}
+
+.card:hover{
+    box-shadow: 8px 8px 20px 20px rgb(138, 138, 138);
+    
+}
+
+/* SECTION */
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
